@@ -10,9 +10,11 @@ def buy(a):
     nilai, status = client.transaksi(a)
     if status == "success":
         trans = client2.histori(1, nilai)
-        return trans
+        nilai = str(nilai)
+        newStatus = status + ". Saldo saat ini "+nilai
+        return trans,newStatus
     else:
-        return "transaksi gagal, saldo tidak cukup"
+        return nilai,"transaksi gagal, saldo tidak cukup. Saldo saat ini : "
 
 
 server.register_function(buy, "beli")

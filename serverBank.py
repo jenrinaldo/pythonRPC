@@ -6,7 +6,7 @@ currentSaldo = 100000
 
 def transa(a):
     global currentSaldo
-    if a < currentSaldo:
+    if a <= currentSaldo:
         currentSaldo -= a
         return currentSaldo, "success"
     else:
