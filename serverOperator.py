@@ -20,5 +20,4 @@ def histori(id, nominal):
 
 
 server.register_function(histori,"histori")
-server.register_multicall_functions()
 server.serve_forever()

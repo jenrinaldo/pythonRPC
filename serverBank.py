@@ -14,5 +14,4 @@ def transa(a):
 
 
 server.register_function(transa, "transaksi")
-server.register_multicall_functions()
 server.serve_forever()
